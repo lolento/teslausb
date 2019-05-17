@@ -49,10 +49,11 @@ function moveclips() {
 }
 
 # legacy file name pattern, firmware 2018.*
-moveclips "$CAM_MOUNT/TeslaCam" 'saved*'
+# moveclips "$CAM_MOUNT/TeslaCam" 'saved*'
+moveclips "$CAM_MOUNT/TeslaCam" '*'
 
 # new file name pattern, firmware 2019.*
-moveclips "$CAM_MOUNT/TeslaCam/SavedClips" '*'
+# moveclips "$CAM_MOUNT/TeslaCam/SavedClips" '*'
 
 # delete empty directories under SavedClips
 rmdir --ignore-fail-on-non-empty "$CAM_MOUNT/TeslaCam/SavedClips"/* || true
